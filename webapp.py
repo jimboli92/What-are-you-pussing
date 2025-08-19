@@ -54,14 +54,14 @@ jimmy_persona, gautham_persona, past_conversation = load_persona_and_history()
 
 # --- NEW: Role Selection ---
 if 'role' not in st.session_state:
-    st.write("First, who are you going to be in this conversation?")
+    st.write("who are you pussing as")
     col1, col2 = st.columns(2)
     with col1:
-        if st.button("I'll be Gautham", use_container_width=True):
+        if st.button("i'm gautham", use_container_width=True):
             st.session_state.role = 'Gautham'
             st.rerun()
     with col2:
-        if st.button("I'll be Jimmy", use_container_width=True):
+        if st.button("i'm jimmy", use_container_width=True):
             st.session_state.role = 'Jimmy'
             st.rerun()
 else:
