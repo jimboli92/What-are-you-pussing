@@ -7,7 +7,7 @@ st.set_page_config(page_title="what are you pussing", page_icon="🤖")
 
 # --- CHANGED: New Title ---
 st.title("what are you pussing")
-st.caption("An AI emulation based on a real conversation.")
+st.caption("do not share this with anyone plz")
 
 
 # --- PERSONA AND HISTORY (The Bot's "Brain") ---
@@ -117,3 +117,4 @@ else:
     except (KeyError, Exception) as e:
 
         st.warning("Please add your Google AI API Key to the Streamlit secrets to run the bot.")
+
