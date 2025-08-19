@@ -50,7 +50,7 @@ def load_persona_and_history():
 persona_prompt, past_conversation = load_persona_and_history()
 
 # --- CHATBOT INITIALIZATION ---
-if API_KEY != "AIzaSyBkO-cHhaxbEAlW8wqi3coT_XStXiS1fiA" and persona_prompt:
+if API_KEY != "YOUR_API_KEY_HERE" and persona_prompt:
     genai.configure(api_key=API_KEY)
 
     # Initialize the chat model in Streamlit's session state if it's not already there
@@ -79,7 +79,7 @@ if API_KEY != "AIzaSyBkO-cHhaxbEAlW8wqi3coT_XStXiS1fiA" and persona_prompt:
         st.session_state.messages.append({"role": "user", "content": prompt})
 
         # Get and display bot response
-        with st.spinner("Jimmy is typing..."):
+        with st.spinner("Not Hans is typing..."):
             response = st.session_state.chat.send_message(prompt)
             with st.chat_message("assistant"):
                 st.markdown(response.text)
