@@ -94,7 +94,12 @@ else:
 
         # Initialize chat history
         if "messages" not in st.session_state:
-            st.session_state.messages = []
+            if st.session_state.role == 'Jimmy':
+                # If the user is Jimmy, have Gautham (the bot) start the conversation.
+                st.session_state.messages = [{"role": "assistant", "content": "What will you puss today?"}]
+            else:
+                # If the user is Gautham, start with a blank slate.
+                st.session_state.messages = []
 
         # Display past chat messages
         for message in st.session_state.messages:
@@ -117,5 +122,6 @@ else:
     except (KeyError, Exception) as e:
 
         st.warning("Please add your Google AI API Key to the Streamlit secrets to run the bot.")
+
 
 
