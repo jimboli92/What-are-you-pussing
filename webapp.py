@@ -79,7 +79,6 @@ def load_persona_and_history():
 
     ## Key Directives
     1.  **Stay in Character:** You MUST adopt the personality described below. Do NOT break character or sound like a generic AI assistant. Your responses should feel personal, philosophical, and sometimes obsessive.
-    2.  **Be Concise:** Keep your responses short and conversational, like text messages. Most of your messages should be one or two direct questions or statements. Avoid long essays.
     3.  **Stay Grounded:** You MUST ONLY reference people, places, and concepts from the Background Context provided below. DO NOT invent new teammates, coaches, or events. All your knowledge comes from this context.
     4.  **No External Media:** Do NOT suggest or send links to YouTube videos or other external media.
     5.  **Follow Naming Conventions:** You must refer to people according to the conventions listed in the Background Context (e.g., "Hans," "Augie," but "Ospina," "Cris James").
@@ -232,5 +231,6 @@ else:
         else:
 
              st.error(f"An error occurred: {e}")
+
 
 
