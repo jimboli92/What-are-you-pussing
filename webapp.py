@@ -108,7 +108,7 @@ else:
                 st.markdown(prompt)
 
             # Get and display bot response with dynamic spinner
-            with st.spinner(f"{bot_name} is typing..."):
+            with st.spinner(f"{bot_name} is pussing..."):
                 response = st.session_state.chat.send_message(prompt)
                 with st.chat_message("assistant"):
                     st.markdown(response.text)
@@ -117,4 +117,5 @@ else:
     except (KeyError, Exception) as e:
 
         st.warning("Please add your Google AI API Key to the Streamlit secrets to run the bot.")
+
 
