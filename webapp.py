@@ -86,7 +86,7 @@ else:
 
         # Initialize the chat model in Streamlit's session state
         if "chat" not in st.session_state:
-            model = genai.GenerativeModel('gemini-1.5-pro')
+            model = genai.GenerativeModel('gemini-2.5-pro')
             st.session_state.chat = model.start_chat(history=[
                 {'role': 'user', 'parts': [bot_persona, past_conversation]},
                 {'role': 'model', 'parts': [f"Okay, I understand. I will now respond as {bot_name}."]}
@@ -115,4 +115,5 @@ else:
             st.session_state.messages.append({"role": "assistant", "content": response.text})
 
     except (KeyError, Exception) as e:
+
         st.warning("Please add your Google AI API Key to the Streamlit secrets to run the bot.")
