@@ -189,8 +189,8 @@ else:
         # Initialize the chat model in Streamlit's session state
         if "chat" not in st.session_state:
             # Note: The user specified 'gemini-2.5-pro', which is not a valid model name.
-            # Using 'gemini-1.5-pro' as the correct, powerful alternative.
-            model = genai.GenerativeModel('gemini-1.5-pro') 
+            # Using 'gemini-2.5-pro' as the correct, powerful alternative.
+            model = genai.GenerativeModel('gemini-2.5-pro') 
             st.session_state.chat = model.start_chat(history=[
                 {'role': 'user', 'parts': [bot_persona, past_conversation]},
                 {'role': 'model', 'parts': [f"Okay, I understand. I will now respond as {bot_name}."]}
@@ -228,4 +228,5 @@ else:
         if 'API_KEY' in str(e):
              st.warning("Please add your Google AI API Key to the Streamlit secrets to run the bot.")
         else:
+
              st.error(f"An error occurred: {e}")
